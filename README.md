@@ -121,3 +121,23 @@ Ce projet permet de travailler :
 • les chaînes de caractères
 • la manipulation de fichiers
 • la conception de programme
+
+
+## 🧠 Logique Algorithmique
+
+Le projet suit un processus de traitement rigoureux en trois phases :
+
+### 1. Phase d'Audit et de Nettoyage (ETL)
+Avant tout traitement, le programme analyse le fichier source :
+- **Extraction** via `DictReader` (nettoyage automatique des espaces).
+- **Validation** : Vérification du format du `Code`, de la `Date` et de la validité numérique des `Notes`.
+- **Ségrégation** : Répartition immédiate entre les données **Valides** et **Invalides**.
+
+### 2. Modélisation (Approche POO)
+Les données valides sont transformées en instances de la classe `Eleve` :
+- **Encapsulation** : Chaque objet gère ses propres attributs (`nom`, `prenom`, `code`, `date`, `classe`, `notes`).
+- **Autonomie** : L'objet possède ses propres méthodes de calcul (`moyenne`) et d'export (`to_dict`).
+
+### 3. Persistance et Menu
+- **Persistance** : Sauvegarde de l'état final dans un fichier `donnees.json`.
+- **Interface** : Menu interactif permettant la modification avec re-validation en temps réel.
